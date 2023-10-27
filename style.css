@@ -1,0 +1,34 @@
+#_BLOCK_ .wrapper {
+  position:relative;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr {{ "amount" | css_var }};
+  align-items:stretch;
+  justify-items:stretch;
+  & video {
+    position:sticky;
+    top:0px;
+    object-fit:cover;
+    {% if fullHeight %}
+    width:100%;
+    height:100vh;
+    {% else %}
+    width:100%;
+    height:auto;
+    {% endif %}
+    grid-row:1 / 2;
+    grid-column:1 / 2;
+    pointer-events:none;
+  }
+  &>.caption-wrapper {
+    display:flex;
+    flex-flow:row;
+    position:sticky;
+    top:0px;
+    grid-row:1 / 2;
+    grid-column:1 / 2;
+    user-select:none;
+    align-items:{{ "captionVAlignment" | css_var }};
+    justify-content:{{ "captionVAlignment" | css_var }};
+  }
+}

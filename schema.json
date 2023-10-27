@@ -1,0 +1,94 @@
+{
+	"elements"		: [
+		{
+			"name"					: "Caption",
+			"handle"				: "caption",
+			"hoverCustomizations"	: true,
+			"customizations"		: "all",
+            "defaults" : {
+              "color": "#FFFFFF",
+              "background-color": "#00000033",
+              "padding": 15,
+              "border-radius": 10,
+              "margin": 30,
+              "backdrop-filter": {"blur": 4},
+            }
+		}
+	],
+	"properties"	: [
+		{
+			"name"			: "Ensuring the video is correctly encoded is crucial for achieving a seamless playback experience. To encode your video, the following FFmpeg settings are recommended:\n\nffmpeg -i input.mp4 -vcodec libx264 -crf 23 -g 1 -pix_fmt yuv420p output.mp4",
+			"type"			: "instruction",
+            "level"		: "info"
+		},
+		{
+			"name"			: "Video Source (URL)",
+			"variable"		: "videoSource",
+			"type"			: "url",
+            "default"		: "https://static.ybouane.com/alpacapp/iphone-15.mp4"
+		},
+		{
+			"name"			: "Caption",
+			"variable"		: "caption",
+			"type"			: "richText",
+			"default"		: ""
+		},
+		{
+			"name"			: "Vertical Alignment of Caption",
+			"variable"		: "captionVAlignment",
+			"type"			: "dropdown",
+            "cssVariable"	: true,
+			"default"		: "center",
+            "options": [
+              {
+                "name": "Top",
+                "value": "start",
+              },
+              {
+                "name": "Center",
+                "value": "center",
+              },
+              {
+                "name": "Bottom",
+                "value": "end",
+              }
+            ]
+		},
+		{
+			"name"			: "Horizontal Alignment of Caption",
+			"variable"		: "captionHAlignment",
+			"type"			: "dropdown",
+            "cssVariable"	: true,
+			"default"		: "center",
+            "options": [
+              {
+                "name": "Left",
+                "value": "left",
+              },
+              {
+                "name": "Center",
+                "value": "center",
+              },
+              {
+                "name": "Right",
+                "value": "right",
+              }
+            ]
+		},
+		{
+			"name"			: "Force video to be full-height",
+			"variable"		: "fullHeight",
+			"type"			: "checkbox",
+            "default"		: true
+		},
+		{
+			"name"			: "Scroll Amount",
+			"variable"		: "amount",
+			"type"			: "number",
+            "cssVariable"	: true,
+			"min"			: 1.0,
+			"unit"			: "fr",
+            "default"		: 3.0
+		},
+	]
+}

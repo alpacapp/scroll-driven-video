@@ -1,0 +1,11 @@
+{
+    "name": "Scroll-driven video",
+    "handle": "scroll-driven-video",
+    "author": "alpacapp",
+    "category": "media",
+    "description": "As the user scrolls down the page, the video progresses, and as the user scrolls up, the video rewinds.",
+    "entry": "block.liquid",
+    "stylesheet": "style.css",
+    "script": "script.js",
+    "icon": "play_circle"
+}

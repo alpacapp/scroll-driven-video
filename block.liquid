@@ -1,0 +1,8 @@
+<div class="wrapper">
+  <video src="{{ videoSource }}" playsinline="true" preload="auto" muted="muted"></video>
+  {% if caption %}
+    <div class="caption-wrapper">
+      <div class="caption" alpacapp-element="caption" alpacapp-editable="caption" alpacapp-richText>{{ caption | richText }}</div>
+    </div>
+  {% endif %}
+</div>

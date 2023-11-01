@@ -29,6 +29,6 @@
     grid-column:1 / 2;
     user-select:none;
     align-items:{{ "captionVAlignment" | css_var }};
-    justify-content:{{ "captionVAlignment" | css_var }};
+    justify-content:{{ "captionHAlignment" | css_var }};
   }
 }
